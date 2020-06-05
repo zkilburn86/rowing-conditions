@@ -12,6 +12,7 @@ flask = "*"
 gunicorn = "*"
 rowingconditions = {editable = true, path = "."}
 pandas = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
