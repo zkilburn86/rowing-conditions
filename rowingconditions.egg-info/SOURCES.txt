@@ -1,0 +1,8 @@
+setup.py
+rowingconditions/__init__.py
+rowingconditions/views.py
+rowingconditions.egg-info/PKG-INFO
+rowingconditions.egg-info/SOURCES.txt
+rowingconditions.egg-info/dependency_links.txt
+rowingconditions.egg-info/requires.txt
+rowingconditions.egg-info/top_level.txt
