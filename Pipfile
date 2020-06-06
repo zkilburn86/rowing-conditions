@@ -13,6 +13,8 @@ gunicorn = "*"
 rowingconditions = {editable = true, path = "."}
 pandas = "*"
 requests = "*"
+datetime = "*"
+pytz = "*"
 
 [requires]
 python_version = "3.7"
