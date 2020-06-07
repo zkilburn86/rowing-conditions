@@ -1,15 +1,13 @@
-import flask
-import dash
-import dash_html_components as html
+from flask import Flask
 
-server = flask.Flask(__name__)
+def create_app():
+    
+    app = Flask(__name__, instance_relative_config=False)
 
-app = dash.Dash(
-    __name__,
-    server=server,
-    routes_pathname_prefix='/dash/'
-)
+    with app.app_context():
+        from rowingconditions import routes
 
-app.layout = html.Div("My Dash app")
+        from rowingconditions.plotlydash.dashboard import create_dashboard
+        app = create_dashboard(app)
 
-from rowingconditions import views
+        return app

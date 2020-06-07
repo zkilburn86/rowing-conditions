@@ -41,7 +41,9 @@ def last_30_days():
         dates = []
         info = []
         for v in values:
-            dates.append(v['dateTime'])
+            returned_datetime_string = v['dateTime']
+            trimmed = returned_datetime_string[:19] + 'Z'
+            dates.append(trimmed)
             info.append(v['value'])
         if (variable_name == 'Streamflow'):
             df.stream_flow = info
@@ -49,4 +51,4 @@ def last_30_days():
         if (variable_name == 'Gage height'):
             df.gage_height = info
 
-    print(df.head())
+    return df
